@@ -16,7 +16,7 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.sensors@2.1-service.xiaomi_sm8350-multihal",
+    name: "android.hardware.sensors@2.1-service.xiaomi_mars-multihal",
     defaults: [
         "hidl_defaults",
     ],
@@ -27,8 +27,8 @@ cc_binary {
         "HalProxy.cpp",
         "HalProxyCallback.cpp",
     ],
-    init_rc: ["android.hardware.sensors@2.1-service.xiaomi_sm8350-multihal.rc"],
-    vintf_fragments: ["android.hardware.sensors@2.1-xiaomi_sm8350-multihal.xml"],
+    init_rc: ["android.hardware.sensors@2.1-service.xiaomi_mars-multihal.rc"],
+    vintf_fragments: ["android.hardware.sensors@2.1-xiaomi_mars-multihal.xml"],
     header_libs: [
         "android.hardware.sensors@2.X-shared-utils",
     ],
@@ -51,7 +51,7 @@ cc_binary {
 }
 
 cc_library_shared {
-    name: "sensors.xiaomi_sm8350",
+    name: "sensors.xiaomi_mars",
     defaults: ["hidl_defaults"],
     srcs: [
         "Sensor.cpp",
@@ -75,7 +75,7 @@ cc_library_shared {
         "android.hardware.sensors@2.X-multihal",
     ],
     cflags: [
-        "-DLOG_TAG=\"sensors.xiaomi_sm8350\"",
+        "-DLOG_TAG=\"sensors.xiaomi_mars\"",
     ],
     vendor: true,
 }
